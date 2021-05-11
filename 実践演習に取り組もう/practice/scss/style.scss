@@ -1,0 +1,247 @@
+@import "foundation/base";
+*{
+    font-family: serif ;
+}
+header{
+    background-color:#4D0000 ;
+    display: block;
+    width: 100%;
+    height: 94px;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    img{
+        width: 188px;
+        height: 70px;
+        padding: 12px 0 0 30px;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        float: right;
+
+        li{
+            a{
+                text-decoration: none;
+                font-size: 18px;
+                color: white;
+                display: block;
+                margin: 25px 25px 0 0;
+                &:hover{
+                    color:white;
+                }
+            }
+        }
+    }
+    .hamburger-btn{
+        width: 40px;
+        height: 32px;
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+        float: right;
+        margin: 28px 34px 0 0;
+        div{
+            width: 40px;
+            height: 1px;
+            border-top: 5px solid white;
+            margin: 9px 0;
+
+        }
+    }
+
+}
+
+
+
+.top{
+    background-image: url("../image/top-bg.png");
+    background-size: cover;
+    height: 674px;
+    padding-top: 0;
+    h1{
+        color: white;
+        text-align: center;
+        padding-top: 260px;
+        font-size: 50px;
+    }
+}
+
+.features{
+    color: white;
+    background-color: black;
+    h1{
+        text-align: center;
+        padding-top: 60px;
+    }
+    .container-fluid{
+        .row{
+            padding: 40px 0;
+            .col-xs-12{
+                img{
+                    width: 100%;
+                }
+                button{
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+#wrap{
+    h1{
+        text-align:center;
+    }
+    background-color:black;
+    padding: 10px 0;
+    height: auto;
+  }
+  h1{
+      color: white;
+  }
+  #slider{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    .slide-item{
+      background-color:white;
+      span{
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 20px;
+        border-right: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        img{
+            width: 100%;
+        }
+      }
+    }
+  }
+
+.hotel-service{
+    background-color: black;
+    .container-fluid{
+        .row{
+            .col-xs-12{
+                background-color: white;
+                margin: 10px 0px;
+                text-align: center;
+                border-right: 15px solid black;
+                border-left: 15px solid black;
+                padding: 40px;
+                img{
+                    margin: 0 auto;
+                    width: 50%;
+                };
+            }
+        }
+    }
+}
+
+.FAQ{
+    background-color: black;
+    text-align: center;
+    padding: 15px 0 10px;
+}
+
+
+.faq-title{
+    position: relative;
+    padding: 8px ;
+    border-bottom: solid 1px #333;
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .faq-title::after{
+    position: absolute;
+    top: 50%;
+    right:10px;
+    display: block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: solid 1px #333;
+    border-right: solid 1px #333;
+    transform: translate(0, -50%) rotate(135deg);
+    transform-origin: center;
+  }
+  
+  .faq-title.active::after{
+    transform:translate(0, -50%) rotate(-45deg);
+  }
+  
+  .faq-description{
+    display: none;
+    margin: 0 auto 24px;
+    padding: 8p;
+    background-color: #c0c0c0;
+    width: 80%;
+  }
+  
+  .faq-description.active{
+    display: block;
+  }
+
+footer{
+    background-color:#4D0000;
+    color: white;
+    text-align: center;
+    line-height: 55px;
+    img{
+        width: 188px;
+        height: 70px;
+    }
+    ul{
+        li{
+            list-style: none;
+            a{
+                color: white;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+  @media screen and(max-width: 770px) {
+    header ul{
+        display: none;
+    }
+    .top{
+        h1{
+            font-size: 35px;
+        }
+    }
+}
+
+@media screen and(min-width: 770px) {
+    header .hamburger-btn{
+        display: none;
+    }
+
+}
+
+@media screen and(max-width:992px){
+    .features{
+        .container-fluid{
+            .reverse{
+                display: flex;
+                flex-direction: column;
+                .order1{
+                    order: 1;
+                }
+                .order2{
+                    order: 2;
+                }
+            }
+        }
+    }
+}
